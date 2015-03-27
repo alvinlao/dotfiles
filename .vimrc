@@ -1,9 +1,11 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/altercation/vim-colors-solarized'
+Plug 'altercation/vim-color-solarized'
 
 Plug 'tpope/vim-surround'
+
+Plug 'junegunn/fzf'
 
 call plug#end()
 
