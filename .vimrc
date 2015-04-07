@@ -1,7 +1,7 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-color-solarized'
+Plug 'https://github.com/altercation/vim-colors-solarized'
 
 Plug 'tpope/vim-surround'
 
@@ -35,6 +35,7 @@ let mapleader = ","
 
 " Turn off search highlight
 map <Leader>q :nohlsearch<CR>
+map <Leader>t :FZF<CR>
 
 
 " Colors
