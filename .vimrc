@@ -5,8 +5,12 @@ Plug 'https://github.com/altercation/vim-colors-solarized'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-ragtag'
 
 Plug 'junegunn/fzf'
+Plug 'scrooloose/syntastic'
+
+Plug 'https://github.com/tmhedberg/SimpylFold.git'
 
 call plug#end()
 
@@ -24,6 +28,8 @@ set softtabstop=4
 filetype plugin on
 
 set autoindent
+set foldmethod=indent
+set foldlevelstart=20
 
 " Search
 set incsearch
