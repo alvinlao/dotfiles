@@ -11,6 +11,7 @@ Plug 'junegunn/fzf'
 Plug 'scrooloose/syntastic'
 
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
+Plug 'https://github.com/bling/vim-airline'
 
 call plug#end()
 
@@ -49,3 +50,18 @@ map <Leader>t :FZF<CR>
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_checkers=['']
+
+" Status line
+set laststatus=2
