@@ -13,3 +13,7 @@ fi
 # Vim plugin manager: vim-plug
 mkdir -p ~/.vim/autoload
 curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Requires xcode and macvim
+cd ~/.vim/plugged/YouCompleteMe
+./install.sh --clang-completer
