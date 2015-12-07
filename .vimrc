@@ -12,6 +12,7 @@ Plug 'scrooloose/syntastic'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
 Plug 'https://github.com/bling/vim-airline'
+Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
