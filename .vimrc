@@ -110,5 +110,5 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " File specific tabbing
-autocmd FileType python setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
