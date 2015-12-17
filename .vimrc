@@ -84,6 +84,7 @@ map <Leader>q :nohlsearch<CR>
 syntax enable
 set background=dark
 colorscheme solarized
+set term=screen-256color
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -112,3 +113,4 @@ let g:ctrlp_cmd = 'CtrlP'
 " File specific tabbing
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 softtabstop=2

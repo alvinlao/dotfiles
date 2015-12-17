@@ -3,6 +3,9 @@
 # Link vimrc
 ln -sf $(pwd)/.vimrc  ~/.vimrc
 
+# Link tmux
+ln -sf $(pwd)/.tmux.conf ~/.tmux.conf
+
 # Mac
 if [ "$(uname)" == "Darwin" ]; then
     ln -sf $(pwd)/.bash_profile ~/.bash_profile
