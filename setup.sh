@@ -20,3 +20,6 @@ curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vi
 # Requires xcode and macvim
 cd ~/.vim/plugged/YouCompleteMe
 ./install.sh --clang-completer
+
+# tmuxinator
+gem install tmuxinator

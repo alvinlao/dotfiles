@@ -14,6 +14,8 @@ Plug 'https://github.com/tmhedberg/SimpylFold.git'
 Plug 'https://github.com/bling/vim-airline'
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'Valloric/YouCompleteMe'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'Yggdroot/indentLine' 
 
 call plug#end()
 
@@ -26,11 +28,11 @@ set nu
 " When enabled, uses spaces in place of characters (noexpandtab)
 set expandtab
 " Width of a tab character
-set tabstop=4
+set tabstop=2
 " Fine tunes the amount of whitespace to be inserted
-set softtabstop=4
+set softtabstop=2
 " Determines the amount of whitespace to insert/remove in normal mode (</>)
-set shiftwidth=4
+set shiftwidth=2
 
 set backspace=indent,eol,start
 filetype plugin on
@@ -110,7 +112,12 @@ autocmd CompleteDone * pclose
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+" Coffee script
+" Enable folding by indentation
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
 " File specific tabbing
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
