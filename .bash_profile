@@ -1,4 +1,5 @@
 export PATH=$PATH:/usr/local/bin
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 export EDITOR=/usr/local/bin/vim
 export CLICOLOR= LSCOLORS=dxfxcxdxbxegedabagacad
 
