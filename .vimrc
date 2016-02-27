@@ -9,13 +9,17 @@ Plug 'tpope/vim-ragtag'
 
 Plug 'scrooloose/syntastic'
 
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
-Plug 'https://github.com/bling/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 Plug 'Yggdroot/indentLine' 
+Plug 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0
+
 
 call plug#end()
 
@@ -97,7 +101,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint', 'jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_html_checkers=['']
 let g:syntastic_html_checkers=['']
 let g:syntastic_python_python_exec='/usr/local/bin/python3'
