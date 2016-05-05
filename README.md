@@ -10,4 +10,4 @@ vim -> :PlugInstall
 
 ## JSXHint
 
-`npm install -g jsxhint`
+`npm install -g eslint`
