@@ -18,6 +18,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'Yggdroot/indentLine' 
 Plug 'elzr/vim-json'
+Plug 'https://github.com/mxw/vim-jsx'
+
+Plug 'https://github.com/lambdatoast/elm.vim.git'
+
 let g:vim_json_syntax_conceal = 0
 
 
