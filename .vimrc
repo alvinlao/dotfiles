@@ -18,7 +18,7 @@ Plug 'https://github.com/jiangmiao/auto-pairs.git'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
-Plug 'Yggdroot/indentLine' 
+Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 Plug 'https://github.com/mxw/vim-jsx'
 
@@ -29,11 +29,22 @@ let g:vim_json_syntax_conceal = 0
 
 call plug#end()
 
-
+" Don't need to be compatible with vi
 set nocompatible
 
 " Numbers
 set nu
+set relativenumber
+
+set encoding=utf-8
+set cursorline
+
+" File completion menu
+set wildmenu
+set wildmode=longest:list,full
+
+" Save undos to <FILENAME>.un~
+set undofile
 
 " When enabled, uses spaces in place of characters (noexpandtab)
 set expandtab
