@@ -6,6 +6,7 @@ Plug 'https://github.com/altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-ragtag'
+Plug 'alvan/vim-closetag'
 
 Plug 'scrooloose/syntastic'
 
@@ -31,6 +32,9 @@ call plug#end()
 
 " Don't need to be compatible with vi
 set nocompatible
+
+" Leader keys
+let mapleader = ","
 
 " Numbers
 set nu
@@ -96,9 +100,12 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+set incsearch
+set showmatch
 
-" Leader keys
-let mapleader = ","
+" Use Perl/Python regex formatting, not VIM style regex
+nnoremap / /\v
+vnoremap / /\v
 
 " Turn off search highlight
 map <Leader>q :nohlsearch<CR>
@@ -134,7 +141,11 @@ autocmd CompleteDone * pclose
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Search for a tag in all buffers
-nnoremap <silent> <Leader>t :CtrlPBufTagAll<cr>
+nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
+let g:ctrlp_show_hidden = 1
+
+" vim-closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
 " Coffee script
 " Enable folding by indentation
