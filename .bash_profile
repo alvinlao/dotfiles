@@ -9,4 +9,6 @@ export CLICOLOR= LSCOLORS=dxfxcxdxbxegedabagacad
 alias ls="ls -G"
 alias ll="ls -al"
 
+set -o vi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
