@@ -15,3 +15,7 @@ vim -> :PlugInstall
 ## OSX Terminal Solarized
 
 Terminal > Preferences > Profiles > Import > solarized-dark.terminal
+
+## CtrlP Tags
+
+Requires exuberant ctags to be installed (`brew install ctags`)

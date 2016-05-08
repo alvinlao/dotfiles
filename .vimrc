@@ -16,6 +16,7 @@ Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'Valloric/YouCompleteMe'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
 Plug 'Yggdroot/indentLine' 
 Plug 'elzr/vim-json'
@@ -121,6 +122,8 @@ autocmd CompleteDone * pclose
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" Search for a tag in all buffers
+nnoremap <silent> <Leader>t :CtrlPBufTagAll<cr>
 
 " Coffee script
 " Enable folding by indentation
