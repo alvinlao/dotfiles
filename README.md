@@ -11,3 +11,7 @@ vim -> :PlugInstall
 ## JSXHint
 
 `npm install -g eslint`
+
+## OSX Terminal Solarized
+
+Terminal > Preferences > Profiles > Import > solarized-dark.terminal
