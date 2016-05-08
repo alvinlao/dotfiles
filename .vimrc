@@ -14,6 +14,7 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'Valloric/YouCompleteMe'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'Yggdroot/indentLine' 
