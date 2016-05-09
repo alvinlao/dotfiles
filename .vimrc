@@ -34,7 +34,7 @@ call plug#end()
 set nocompatible
 
 " Leader keys
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Numbers
 set nu
