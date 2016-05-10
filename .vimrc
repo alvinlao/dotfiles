@@ -107,7 +107,10 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Turn off search highlight
-map <Leader>q :nohlsearch<CR>
+map <Leader>c :nohlsearch<CR>
+
+" Close current buffer
+nnoremap <Leader>q :bd<CR>
 
 " Colors
 syntax enable
@@ -141,6 +144,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Search for a tag in all buffers
 nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
+nnoremap <Leader>p :CtrlPBuffer<cr>
 let g:ctrlp_show_hidden = 1
 
 " vim-closetag
