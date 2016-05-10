@@ -26,8 +26,6 @@ Plug 'https://github.com/mxw/vim-jsx'
 
 Plug 'https://github.com/lambdatoast/elm.vim.git'
 
-let g:vim_json_syntax_conceal = 0
-
 
 call plug#end()
 
@@ -147,6 +145,9 @@ let g:ctrlp_show_hidden = 1
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+
+" Prevent vim-json from hiding quotes
+let g:vim_json_syntax_conceal = 0
 
 " vim-jsx
 let g:jsx_ext_required = 0
