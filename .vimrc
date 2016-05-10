@@ -21,6 +21,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
 Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
 
 Plug 'https://github.com/lambdatoast/elm.vim.git'
@@ -146,6 +147,9 @@ let g:ctrlp_show_hidden = 1
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
 " Coffee script
 " Enable folding by indentation
