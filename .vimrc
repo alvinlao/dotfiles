@@ -2,53 +2,68 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/altercation/vim-colors-solarized'
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
+
+Plug 'Valloric/YouCompleteMe'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-ragtag'
+
 Plug 'alvan/vim-closetag'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
 
 Plug 'scrooloose/syntastic'
 
-Plug 'https://github.com/tmhedberg/SimpylFold.git'
-Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/vim-airline/vim-airline-themes'
-Plug 'https://github.com/kchmck/vim-coffee-script.git'
-Plug 'Valloric/YouCompleteMe'
-Plug 'https://github.com/jiangmiao/auto-pairs.git'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-
 Plug 'Yggdroot/indentLine'
+
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
 
+Plug 'https://github.com/tmhedberg/SimpylFold.git'
+Plug 'https://github.com/kchmck/vim-coffee-script.git'
 Plug 'https://github.com/lambdatoast/elm.vim.git'
 
+Plug 'xolox/vim-notes'
+Plug 'vim-misc'
 
 call plug#end()
 
 " Don't need to be compatible with vi
 set nocompatible
 
-" Leader keys
-let mapleader = "\<Space>"
+" Colors
+syntax enable
+set background=dark
+colorscheme solarized
+set term=screen-256color
 
-" Numbers
-set nu
-set relativenumber
-
+" Misc settings
 set encoding=utf-8
+set number
+set relativenumber
 set cursorline
-
+set backspace=indent,eol,start
 " File completion menu
 set wildmenu
 set wildmode=longest:list,full
-
 " Save undos to <FILENAME>.un~
 set undofile
+" Search
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set showmatch
 
+set autoindent
+set foldmethod=indent
+set foldlevelstart=20
 " When enabled, uses spaces in place of characters (noexpandtab)
 set expandtab
 " Width of a tab character
@@ -58,12 +73,72 @@ set softtabstop=2
 " Determines the amount of whitespace to insert/remove in normal mode (</>)
 set shiftwidth=2
 
-set backspace=indent,eol,start
 filetype plugin on
 
-set autoindent
-set foldmethod=indent
-set foldlevelstart=20
+
+" Use Perl/Python regex formatting, not VIM style regex
+nnoremap / /\v
+vnoremap / /\v
+
+" Leader keys
+let mapleader = "\<Space>"
+
+" Turn off search highlight
+nnoremap <Leader>c :nohlsearch<CR>
+
+" Close current buffer
+nnoremap <Leader>q :bd<CR>
+
+" Status line
+set laststatus=2
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_html_checkers=['']
+let g:syntastic_html_checkers=['']
+let g:syntastic_python_python_exec='/usr/local/bin/python3'
+
+" YouCompleteMe
+autocmd CompleteDone * pclose
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Search for a tag in all buffers
+nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
+nnoremap <Leader>p :CtrlPBuffer<cr>
+let g:ctrlp_show_hidden = 1
+
+" vim-closetag
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+
+" Prevent vim-json from hiding quotes
+let g:vim_json_syntax_conceal = 0
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
+" Coffee script
+" Enable folding by indentation
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
+" vim-notes
+let g:notes_directories = ['~/Dropbox/Notes']
+let g:notes_suffix = '.txt'
+let g:notes_smart_quotes = 0
+let g:notes_conceal_code = 0
+let g:notes_conceal_italic = 0
+let g:notes_conceal_bold = 0
+let g:notes_conceal_url = 0
 
 " Change tab/space
 " Set tabstop, softtabstop and shiftwidth to the same value
@@ -93,72 +168,6 @@ function! SummarizeTabs()
     echohl None
   endtry
 endfunction
-
-" Search
-set incsearch
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set showmatch
-
-" Use Perl/Python regex formatting, not VIM style regex
-nnoremap / /\v
-vnoremap / /\v
-
-" Turn off search highlight
-map <Leader>c :nohlsearch<CR>
-
-" Close current buffer
-nnoremap <Leader>q :bd<CR>
-
-" Colors
-syntax enable
-set background=dark
-colorscheme solarized
-set term=screen-256color
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_html_checkers=['']
-let g:syntastic_html_checkers=['']
-let g:syntastic_python_python_exec='/usr/local/bin/python3'
-
-" Status line
-set laststatus=2
-
-" YouCompleteMe
-autocmd CompleteDone * pclose
-
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-" Search for a tag in all buffers
-nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
-nnoremap <Leader>p :CtrlPBuffer<cr>
-let g:ctrlp_show_hidden = 1
-
-" vim-closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
-
-" Prevent vim-json from hiding quotes
-let g:vim_json_syntax_conceal = 0
-
-" vim-jsx
-let g:jsx_ext_required = 0
-
-" Coffee script
-" Enable folding by indentation
-autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 " File specific tabbing
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
