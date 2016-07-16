@@ -16,17 +16,26 @@ Plug 'tpope/vim-ragtag'
 Plug 'alvan/vim-closetag'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
 
-Plug 'scrooloose/syntastic'
 
 Plug 'Yggdroot/indentLine'
 
+" JavaScript
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
+Plug 'scrooloose/syntastic'
 
+" CoffeeScript
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
+
+" JS Languages
 Plug 'https://github.com/lambdatoast/elm.vim.git'
+Plug 'https://github.com/raichoo/purescript-vim'
+
+" Clojure
+Plug 'guns/vim-clojure-static'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'xolox/vim-notes'
 Plug 'vim-misc'
@@ -41,6 +50,14 @@ syntax enable
 set background=dark
 colorscheme solarized
 set term=screen-256color
+
+" Rainbow Parens
+let g:rainbow#max_level = 16
+let g:rainbow#pairs = [['(', ')'], ['[', ']']]
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
 
 " Misc settings
 set encoding=utf-8
@@ -72,6 +89,9 @@ set tabstop=2
 set softtabstop=2
 " Determines the amount of whitespace to insert/remove in normal mode (</>)
 set shiftwidth=2
+
+" Adds leading comment character
+set formatoptions+=ro
 
 filetype plugin on
 
