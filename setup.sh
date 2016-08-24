@@ -24,5 +24,9 @@ curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vi
 cd ~/.vim/plugged/YouCompleteMe
 ./install.sh --clang-completer
 
+# Link neovim
+ln -sf ~/.vim ~/.config/nvim
+ln -sf ~/.vimrc ~/.config/nvim/init.vim
+
 # tmuxinator
 gem install tmuxinator

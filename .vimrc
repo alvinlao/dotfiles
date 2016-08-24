@@ -16,7 +16,6 @@ Plug 'tpope/vim-ragtag'
 Plug 'alvan/vim-closetag'
 Plug 'https://github.com/jiangmiao/auto-pairs.git'
 
-
 Plug 'Yggdroot/indentLine'
 
 " JavaScript
@@ -49,7 +48,7 @@ set nocompatible
 syntax enable
 set background=dark
 colorscheme solarized
-set term=screen-256color
+" set term=screen-256color
 
 " Rainbow Parens
 let g:rainbow#max_level = 16
@@ -58,6 +57,10 @@ augroup rainbow_lisp
   autocmd!
   autocmd FileType lisp,clojure,scheme RainbowParentheses
 augroup END
+
+" AutoPair
+let g:AutoPairsMultilineClose = 0
+
 
 " Misc settings
 set encoding=utf-8
