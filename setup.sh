@@ -30,3 +30,6 @@ ln -sf ~/.vimrc ~/.config/nvim/init.vim
 
 # tmuxinator
 gem install tmuxinator
+
+# Set global gitignore
+git config --global core.excludesfile $(pwd)/.gitignore_global
