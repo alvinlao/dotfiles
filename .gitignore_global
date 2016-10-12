@@ -1,2 +1,6 @@
+# MAC OS
 **/.DS_STORE
+
+# Vim
 *.un~
+*.swp
