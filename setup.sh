@@ -28,6 +28,9 @@ cd ~/.vim/plugged/YouCompleteMe
 ln -sf ~/.vim ~/.config/nvim
 ln -sf ~/.vimrc ~/.config/nvim/init.vim
 
+# Link haskeline (GHCI vi mode)
+ln -sf $(pwd)/.haskeline ~/.haskeline
+
 # tmuxinator
 gem install tmuxinator
 
