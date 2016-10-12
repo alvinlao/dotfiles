@@ -19,3 +19,7 @@ Terminal > Preferences > Profiles > Import > solarized-dark.terminal
 ## CtrlP Tags
 
 Requires exuberant ctags to be installed (`brew install ctags`)
+
+## Clipboard in tmux
+
+`brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste`

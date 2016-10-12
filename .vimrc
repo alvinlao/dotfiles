@@ -14,7 +14,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-ragtag'
 
 Plug 'alvan/vim-closetag'
-Plug 'https://github.com/jiangmiao/auto-pairs.git'
 
 Plug 'Yggdroot/indentLine'
 
