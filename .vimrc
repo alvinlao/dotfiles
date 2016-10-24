@@ -92,6 +92,15 @@ set softtabstop=2
 " Determines the amount of whitespace to insert/remove in normal mode (</>)
 set shiftwidth=2
 
+" Split
+set splitbelow
+set splitright
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 " Adds leading comment character
 set formatoptions+=ro
 
@@ -108,8 +117,20 @@ let mapleader = "\<Space>"
 " Turn off search highlight
 nnoremap <Leader>c :nohlsearch<CR>
 
-" Close current buffer
-nnoremap <Leader>q :bd<CR>
+" Buffer Control
+" To open a new empty buffer
+nnoremap <Leader>T :enew<cr>
+" Move to the next buffer
+nnoremap <Leader>l :bnext<CR>
+" Move to the previous buffer
+nnoremap <Leader>h :bprevious<CR>
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nnoremap <Leader>q :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nnoremap <Leader>bl :ls<CR>
+
+
 
 " Status line
 set laststatus=2
@@ -133,11 +154,17 @@ let g:syntastic_python_python_exec='/usr/local/bin/python3'
 autocmd CompleteDone * pclose
 
 " CtrlP
+" Setup some default ignores
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp)$',
+\}
+let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Search for a tag in all buffers
 nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
-nnoremap <Leader>p :CtrlPBuffer<cr>
+nnoremap <Leader>p :CtrlPMixed<cr>
 let g:ctrlp_show_hidden = 1
 
 " vim-closetag
