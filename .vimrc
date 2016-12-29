@@ -157,10 +157,10 @@ autocmd CompleteDone * pclose
 " CtrlP
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp)$',
 \}
-let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_working_path_mode = 0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Search for a tag in all buffers
