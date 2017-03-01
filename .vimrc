@@ -224,3 +224,4 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType make setlocal noexpandtab
