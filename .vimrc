@@ -213,3 +213,7 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType make setlocal noexpandtab
+
+" Neovim
+" Disable cursor style change
+:set guicursor=
