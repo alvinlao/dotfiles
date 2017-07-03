@@ -155,7 +155,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 " Tag Jump
 " If multiple matches, list them
-nmap <C-]> g<C-]>
+nmap <silent><Leader><C-]> <C-w>vg<C-]>
 
 " CtrlP
 " Setup some default ignores
