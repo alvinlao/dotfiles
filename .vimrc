@@ -159,6 +159,7 @@ nmap <C-]> g<C-]>
 
 " CtrlP
 " Setup some default ignores
+set wildignore+=*.pyc
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp)$',
