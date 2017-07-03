@@ -6,6 +6,7 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 Plug 'Valloric/YouCompleteMe'
+Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
