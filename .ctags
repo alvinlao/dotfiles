@@ -1,1 +1,10 @@
+--recurse=yes
+--exclude=*.git*
+--exclude=*.pyc
+--exclude=*.pyo
+--exclude=.DS_Store
+--exclude=*.md
+--exclude=*.mkd
+
+--fields=+l
 --python-kinds=-i

@@ -151,6 +151,11 @@ let g:syntastic_python_python_exec='/usr/local/bin/python3'
 
 " YouCompleteMe
 autocmd CompleteDone * pclose
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+" Tag Jump
+" If multiple matches, list them
+nmap <C-]> g<C-]>
 
 " CtrlP
 " Setup some default ignores
