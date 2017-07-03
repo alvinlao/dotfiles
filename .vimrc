@@ -36,9 +36,6 @@ Plug 'https://github.com/raichoo/purescript-vim'
 Plug 'guns/vim-clojure-static'
 Plug 'junegunn/rainbow_parentheses.vim'
 
-Plug 'xolox/vim-notes'
-Plug 'vim-misc'
-
 call plug#end()
 
 " Don't need to be compatible with vi
@@ -180,15 +177,6 @@ let g:jsx_ext_required = 0
 " Coffee script
 " Enable folding by indentation
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
-
-" vim-notes
-let g:notes_directories = ['~/Dropbox/Notes']
-let g:notes_suffix = '.txt'
-let g:notes_smart_quotes = 0
-let g:notes_conceal_code = 0
-let g:notes_conceal_italic = 0
-let g:notes_conceal_bold = 0
-let g:notes_conceal_url = 0
 
 " Change tab/space
 " Set tabstop, softtabstop and shiftwidth to the same value
