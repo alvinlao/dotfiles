@@ -165,7 +165,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Search for a tag in all buffers
 nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
-nnoremap <Leader>p :CtrlPMixed<cr>
+nnoremap <Leader>p :CtrlP<cr>
 let g:ctrlp_show_hidden = 1
 
 " vim-closetag
