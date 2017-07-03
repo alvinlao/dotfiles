@@ -5,7 +5,8 @@ Plug 'https://github.com/altercation/vim-colors-solarized'
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'https://github.com/ajh17/VimCompletesMe'
 Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -59,7 +60,6 @@ augroup END
 " AutoPair
 let g:AutoPairsMultilineClose = 0
 
-
 " Misc settings
 set encoding=utf-8
 set number
@@ -94,6 +94,9 @@ set shiftwidth=2
 " Split
 set splitbelow
 set splitright
+
+" Menu
+set completeopt+=longest
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -223,4 +226,4 @@ autocmd FileType make setlocal noexpandtab
 
 " Neovim
 " Disable cursor style change
-:set guicursor=
+set guicursor=
