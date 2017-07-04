@@ -5,8 +5,7 @@ Plug 'https://github.com/altercation/vim-colors-solarized'
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
-"Plug 'Valloric/YouCompleteMe'
-Plug 'https://github.com/ajh17/VimCompletesMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -95,9 +94,6 @@ set shiftwidth=2
 set splitbelow
 set splitright
 
-" Menu
-set completeopt+=longest
-
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
@@ -107,7 +103,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 set formatoptions+=ro
 
 filetype plugin on
-
 
 " Use Perl/Python regex formatting, not VIM style regex
 nnoremap / /\v
@@ -131,8 +126,6 @@ nnoremap <Leader>h :bprevious<CR>
 nnoremap <Leader>q :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nnoremap <Leader>bl :ls<CR>
-
-
 
 " Status line
 set laststatus=2
