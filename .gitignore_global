@@ -4,3 +4,6 @@
 # Vim
 *.un~
 *.swp
+
+# Tags
+tags
