@@ -157,7 +157,7 @@ nmap <silent><Leader><C-]> <C-w>vg<C-]>
 " Setup some default ignores
 set wildignore+=*.pyc
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules|ios|android)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp)$',
 \}
 let g:ctrlp_working_path_mode = 'ra'
