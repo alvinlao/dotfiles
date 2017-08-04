@@ -6,6 +6,9 @@
 --exclude=*.md
 --exclude=*.mkd
 --exclude=env
+--exclude=node_modules
+--exclude=ios
+--exclude=android
 
 --fields=+l
 --python-kinds=-i
