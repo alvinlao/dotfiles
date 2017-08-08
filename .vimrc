@@ -23,7 +23,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 
 " CoffeeScript
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
@@ -130,20 +130,10 @@ nnoremap <Leader>bl :ls<CR>
 " Status line
 set laststatus=2
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_html_checkers=['']
-let g:syntastic_html_checkers=['']
-let g:syntastic_python_python_exec='/usr/local/bin/python3'
+" Neomake
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_open_list = 2
 
 " YouCompleteMe
 autocmd CompleteDone * pclose
