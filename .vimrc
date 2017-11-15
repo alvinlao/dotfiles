@@ -25,8 +25,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
 Plug 'neomake/neomake'
 
+" Python
+"Plug 'https://github.com/tmhedberg/SimpylFold.git'
+
 " CoffeeScript
-Plug 'https://github.com/tmhedberg/SimpylFold.git'
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
 
 " JS Languages
@@ -61,6 +63,7 @@ let g:AutoPairsMultilineClose = 0
 
 " Misc settings
 set encoding=utf-8
+" number + relativenumber gives hybrid line numbers
 set number
 set relativenumber
 set cursorline
@@ -76,16 +79,17 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-set showmatch
+set showmatch       " Highlight matching parenthesis
+set lazyredraw      " Don't redraw during macros
 
 set autoindent
 set foldmethod=indent
 set foldlevelstart=20
-" When enabled, uses spaces in place of characters (noexpandtab)
+" Tabs are spaces
 set expandtab
-" Width of a tab character
+" Number of visual spaces per TAB
 set tabstop=2
-" Fine tunes the amount of whitespace to be inserted
+" Number of spaces in TAB when editing
 set softtabstop=2
 " Determines the amount of whitespace to insert/remove in normal mode (</>)
 set shiftwidth=2
