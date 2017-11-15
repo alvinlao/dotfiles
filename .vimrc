@@ -137,6 +137,7 @@ set laststatus=2
 " Neomake
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_open_list = 2
 
 " YouCompleteMe
@@ -151,7 +152,7 @@ nmap <silent><Leader><C-]> <C-w>vg<C-]>
 " Setup some default ignores
 set wildignore+=*.pyc
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules|ios|android)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules|ios|android|.mypy_cache)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp)$',
 \}
 let g:ctrlp_working_path_mode = 'ra'
