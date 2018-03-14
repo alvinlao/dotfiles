@@ -14,6 +14,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-commentary'
 
 Plug 'alvan/vim-closetag'
 
