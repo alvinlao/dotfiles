@@ -38,6 +38,8 @@ Plug 'https://github.com/raichoo/purescript-vim'
 " Clojure
 Plug 'guns/vim-clojure-static'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'vim-scripts/paredit.vim'
+Plug 'tpope/vim-fireplace'
 
 call plug#end()
 
@@ -179,6 +181,10 @@ let g:jsx_ext_required = 0
 " Coffee script
 " Enable folding by indentation
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
+" Paredit (Clojure)
+let g:paredit_leader='<leader>'
+let g:paredit_shortmaps=0
 
 " Change tab/space
 " Set tabstop, softtabstop and shiftwidth to the same value
