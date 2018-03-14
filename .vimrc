@@ -49,6 +49,10 @@ set background=dark
 colorscheme solarized
 " set term=screen-256color
 
+" Esc Timeout
+set ttimeout
+set ttimeoutlen=0
+
 " Rainbow Parens
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']']]
