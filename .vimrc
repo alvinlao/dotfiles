@@ -20,7 +20,6 @@ Plug 'alvan/vim-closetag'
 Plug 'Yggdroot/indentLine'
 
 " JavaScript
-Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
 Plug 'neomake/neomake'
