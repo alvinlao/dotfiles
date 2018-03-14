@@ -153,7 +153,7 @@ nmap <silent><Leader><C-]> <C-w>vg<C-]>
 set wildignore+=*.pyc
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|env|node_modules|ios|android|.mypy_cache)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|un\~|swp|DS_Store)$',
 \}
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<c-p>'
