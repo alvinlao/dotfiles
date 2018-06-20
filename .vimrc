@@ -172,7 +172,10 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['line']
 
 "incsearch-fuzzy
+" Fuzzy search
 map / <Plug>(incsearch-fuzzy-/)
+" Normal search
+map // <Plug>(incsearch-forward)
 
 
 " vim-closetag
