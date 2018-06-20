@@ -86,7 +86,6 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-set incsearch
 set showmatch       " Highlight matching parenthesis
 set lazyredraw      " Don't redraw during macros
 
@@ -117,8 +116,8 @@ set formatoptions+=ro
 filetype plugin on
 
 " Use Perl/Python regex formatting, not VIM style regex
-nnoremap / /\v
-vnoremap / /\v
+" nnoremap / /\v
+" vnoremap / /\v
 
 " Leader keys
 let mapleader = "\<Space>"
