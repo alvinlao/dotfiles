@@ -10,8 +10,6 @@ Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-fuzzy.vim'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -170,13 +168,6 @@ nnoremap <silent> <Leader>t :CtrlPBufTag<cr>
 nnoremap <Leader>p :CtrlP<cr>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_extensions = ['line']
-
-"incsearch-fuzzy
-" Fuzzy search
-map / <Plug>(incsearch-fuzzy-/)
-" Normal search
-map // <Plug>(incsearch-forward)
-
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
