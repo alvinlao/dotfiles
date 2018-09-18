@@ -21,6 +21,7 @@ Plug 'alvan/vim-closetag'
 Plug 'Yggdroot/indentLine'
 
 " JavaScript
+Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'https://github.com/mxw/vim-jsx'
 Plug 'neomake/neomake'
@@ -173,7 +174,7 @@ let g:ctrlp_extensions = ['line']
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 
 " Prevent vim-json from hiding quotes
-let g:vim_json_syntax_conceal = 0
+let g:vim_json_syntax_conceal=0
 
 " vim-jsx
 let g:jsx_ext_required = 0
