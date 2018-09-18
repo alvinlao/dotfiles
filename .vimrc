@@ -187,6 +187,12 @@ autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 let g:paredit_leader='<leader>'
 let g:paredit_shortmaps=0
 
+" Speed Up Syntax Highlighting
+augroup vimrc
+  autocmd!
+  autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+augroup END
+
 " Change tab/space
 " Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=* Stab call Stab()
