@@ -1,7 +1,7 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
 
@@ -50,7 +50,8 @@ set nocompatible
 " Colors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
+set termguicolors
 " set term=screen-256color
 
 " Esc Timeout
