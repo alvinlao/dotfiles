@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/vim-airline/vim-airline-themes'
 
 Plug 'Valloric/YouCompleteMe'
 Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
@@ -126,8 +125,6 @@ let mapleader = "\<Space>"
 nnoremap <Leader>c :nohlsearch<CR>
 
 " Buffer Control
-" To open a new empty buffer
-nnoremap <Leader>T :enew<cr>
 " Move to the next buffer
 nnoremap <Leader>l :bnext<CR>
 " Move to the previous buffer
@@ -135,8 +132,6 @@ nnoremap <Leader>h :bprevious<CR>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nnoremap <Leader>q :bp <BAR> bd #<CR>
-" Show all open buffers and their status
-nnoremap <Leader>bl :ls<CR>
 
 " Status line
 set laststatus=2
@@ -145,6 +140,7 @@ set laststatus=2
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_java_enabled_makers = []
 let g:neomake_open_list = 2
 
 " YouCompleteMe
