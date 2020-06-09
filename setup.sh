@@ -32,7 +32,7 @@ ln -sf ~/.vimrc ~/.config/nvim/init.vim
 ln -sf $(pwd)/.ctags  ~/.ctags
 
 # Link haskeline (GHCI vi mode)
-ln -sf $(pwd)/.haskeline ~/.haskeline
+# ln -sf $(pwd)/.haskeline ~/.haskeline
 
 # tmuxinator
 gem install tmuxinator

@@ -5,7 +5,7 @@ Plug 'morhetz/gruvbox'
 Plug 'https://github.com/vim-airline/vim-airline'
 
 Plug 'Valloric/YouCompleteMe'
-Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
+" Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
@@ -27,6 +27,7 @@ Plug 'neomake/neomake'
 
 " Python
 "Plug 'https://github.com/tmhedberg/SimpylFold.git'
+Plug 'tell-k/vim-autopep8'
 
 " CoffeeScript
 Plug 'https://github.com/kchmck/vim-coffee-script.git'
@@ -52,6 +53,7 @@ set background=dark
 colorscheme gruvbox
 set termguicolors
 " set term=screen-256color
+set colorcolumn=80
 
 " Esc Timeout
 set ttimeout
@@ -229,3 +231,10 @@ autocmd FileType make setlocal noexpandtab
 " Neovim
 " Disable cursor style change
 set guicursor=
+
+" Python
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff = 1
+
+" Enable switching away from unsaved buffers
+set hidden
