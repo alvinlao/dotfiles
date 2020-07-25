@@ -42,6 +42,11 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'vim-scripts/paredit.vim'
 Plug 'tpope/vim-fireplace'
 
+" Auto Format
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+
 call plug#end()
 
 " Don't need to be compatible with vi
@@ -177,6 +182,11 @@ let g:vim_json_syntax_conceal=0
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" Auto formatting
+augroup autoformat_settings
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+augroup END
 
 " Coffee script
 " Enable folding by indentation
